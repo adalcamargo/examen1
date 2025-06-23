@@ -1,0 +1,146 @@
+/* Estilos generales */
+.nosotros-camastore {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container-nosotros {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo-camastore {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-camastore img {
+  max-height: 120px;
+  width: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.logo-camastore img:hover {
+  transform: scale(1.05);
+}
+
+/* Tipografía y jerarquía */
+.nosotros-camastore h1 {
+  color: #2b2d42;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.nosotros-camastore h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+}
+
+.nosotros-camastore h2 {
+  color: #4361ee;
+  font-size: 1.8rem;
+  margin: 35px 0 15px;
+  border-left: 4px solid #4cc9f0;
+  padding-left: 15px;
+}
+
+.nosotros-camastore h3 {
+  color: #2b2d42;
+  font-size: 1.4rem;
+  margin: 25px 0 10px;
+}
+
+.nosotros-camastore p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Destacados */
+.nosotros-camastore strong {
+  color: #4361ee;
+  font-weight: 600;
+}
+
+/* Lista de características */
+.nosotros-camastore h3 {
+  display: flex;
+  align-items: center;
+}
+
+.nosotros-camastore h3:before {
+  content: '✓';
+  color: #4cc9f0;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+/* Efectos y detalles */
+.nosotros-camastore p {
+  position: relative;
+  padding-left: 20px;
+}
+
+.nosotros-camastore p:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #4cc9f0;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nosotros-camastore {
+    padding: 40px 0;
+  }
+  
+  .nosotros-camastore h1 {
+    font-size: 2rem;
+  }
+  
+  .nosotros-camastore h2 {
+    font-size: 1.5rem;
+  }
+  
+  .nosotros-camastore h3 {
+    font-size: 1.2rem;
+  }
+  
+  .nosotros-camastore p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-nosotros {
+    padding: 0 15px;
+  }
+  
+  .nosotros-camastore p {
+    padding-left: 15px;
+  }
+  
+  .nosotros-camastore p:before {
+    width: 6px;
+    height: 6px;
+  }
+}

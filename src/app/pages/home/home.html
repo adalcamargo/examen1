@@ -1,0 +1,440 @@
+<section class="inicio">
+    <!-- 1. Hero Banner - Descubre lo nuevo -->
+    <div class="hero-banner">
+        <h1>Descubre lo último en tecnología móvil</h1>
+        <p>Encuentra los smartphones más potentes al mejor precio</p>
+    </div>
+
+    <div class="slider-container">
+  <button class="slider-btn prev" (click)="prevSlide()">&lsaquo;</button>
+  <button class="slider-btn next" (click)="nextSlide()">&rsaquo;</button>
+
+  <div class="slider-track" [style.transform]="getTransform()">
+    <!-- Slides de productos -->
+    <div class="slide" *ngFor="let product of products">
+      <div class="product-card">
+        <h2 class="product-title">{{product.title}}</h2>
+        <div class="sponsor-badge" *ngIf="product.sponsor">{{product.sponsor}}</div>
+        
+        <div class="payment-option">
+          <div class="aplazo-option">
+            <span class="aplazo-text">aplazo / {{product.installments}}</span>
+            <span class="buy-now-text">COMPRA HOY</span>
+          </div>
+          <div class="payment-slogan">
+            Y PAGA A PLAZOS<br>
+            HAZLO FÁCIL Y SIN TARJETA DE CRÉDITO
+          </div>
+        </div>
+        
+        <button class="buy-now-button">COMPRAR AHORA</button>
+        
+        <div class="store-info">
+          {{product.storeUrl}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Slides de imágenes -->
+    <div class="slide">
+      <img src="/img/Nuevo1.png" alt="Nuevo 1" class="promo-image" />
+    </div>
+    <div class="slide">
+      <img src="/img/nuevo2.png" alt="Nuevo 2" class="promo-image" />
+    </div>
+    <div class="slide">
+      <img src="/img/nuevo3.png" alt="Nuevo 3" class="promo-image" />
+    </div>
+    <div class="slide">
+      <img src="/img/nuevo4.png" alt="Nuevo 4" class="promo-image" />
+    </div>
+    <div class="slide">
+      <img src="/img/nuevo5.png" alt="Nuevo 5" class="promo-image" />
+    </div>
+  </div>
+</div>
+  
+            <!-- Sección de beneficios -->
+            <div class="beneficios">
+                <div class="beneficio-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Hasta 1 año de garantía</h4>
+                    <p>Cobertura extendida en todos nuestros productos</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h4>Devoluciones fáciles</h4>
+                    <p>30 días para cambiar de opinión</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Facilidades de pago</h4>
+                    <p>Hasta 12 meses sin intereses</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <i class="fas fa-truck"></i>
+                    <h4>Envío rápido</h4>
+                    <p>Recibe en 24-48 horas</p>
+                </div>
+            </div>
+        
+
+    <!-- 3. Teléfonos más nuevos -->
+    <div class="telefonos-nuevos">
+        <h2 class="section-title">LOS TELÉFONOS MÁS NUEVOS</h2>
+        <div class="nuevos-grid">
+            <!-- Teléfono 1 -->
+            <div class="nuevo-item destacado">
+                <span class="badge-nuevo">LANZAMIENTO</span>
+                <img src="/img/s25.jpg" alt="Samsung S25">
+                <h3>Samsung Galaxy S25 Ultra</h3>
+                <div class="especificaciones">
+                    <span>Pantalla 6.8" AMOLED</span>
+                    <span>Cámara 200MP</span>
+                    <span>Snapdragon 8 Gen 4</span>
+                </div>
+                <div class="precio">$20,867 <span class="descuento">Reserva ahora</span></div>
+                <button class="btn-ver">Ver detalles</button>
+            </div>
+            
+            <!-- Teléfono 2 -->
+            <div class="nuevo-item">
+                <span class="badge-nuevo">NUEVO</span>
+                <img src="/img/14t.jpg" alt="Xiaomi 14T">
+                <h3>Xiaomi 14T Pro</h3>
+                <div class="especificaciones">
+                    <span>Pantalla 6.67" 120Hz</span>
+                    <span>Cámara triple 108MP</span>
+                    <span>Dimensity 9200+</span>
+                </div>
+                <div class="precio">$10,557</div>
+                <button class="btn-ver">Ver detalles</button>
+            </div>
+            
+            <!-- Teléfono 3 -->
+            <div class="nuevo-item">
+                <span class="badge-nuevo">EXCLUSIVO</span>
+                <img src="/img/GT7_Pro.jpg" alt="Realme GT7">
+                <h3>Realme GT7 Pro</h3>
+                <div class="especificaciones">
+                    <span>Pantalla 6.7" LTPO</span>
+                    <span>Snapdragon 8+ Gen 2</span>
+                    <span>240W Carga rápida</span>
+                </div>
+                <div class="precio">$8,799 <span class="descuento">5% OFF</span></div>
+                <button class="btn-ver">Ver detalles</button>
+            </div>
+            
+            <!-- Teléfono 4 -->
+            <div class="nuevo-item">
+                <span class="badge-nuevo">NUEVO</span>
+                <img src="/img/x7_pro.jpg" alt="Poco X7">
+                <h3>POCO X7 Pro</h3>
+                <div class="especificaciones">
+                    <span>Pantalla AMOLED 120Hz</span>
+                    <span>Dimensity 8200</span>
+                    <span>67W Carga rápida</span>
+                </div>
+                <div class="precio">$5,440 <span class="descuento">10% OFF</span></div>
+                <button class="btn-ver">Ver detalles</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 5. Los más deseados -->
+  <div class="top-products">
+    <h2 class="section-title">LOS MÁS DESEADOS</h2>
+    <div class="top-section">
+      <div class="productos-grid">
+
+        <!-- Producto 1 - Con todos los campos -->
+        <div class="producto destacado">
+          <span class="rank">1</span>
+          <img src="/img/s24.jpg" alt="Samsung Galaxy S24 Ultra">
+          <h3>Samsung Galaxy S24 Ultra</h3>
+          <div class="rating">★★★★★ <span class="rating-value">4.8</span></div>
+          <p class="precio">MX $16,376</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Negro titanio</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #2D2D2D;" data-color="Negro titanio"></span>
+                <span class="color-btn" style="background: #E0D7C6;" data-color="Beige"></span>
+                <span class="color-btn" style="background: #5A5A8C;" data-color="Violeta"></span>
+                <span class="color-btn" style="background: #C0C0C0;" data-color="Plata"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">256 GB</span>
+                <span class="memoria-btn">512 GB</span>
+              </div>
+            </div>
+          </div>
+          <div class="etiqueta">¡OFERTA!</div>
+          <div class="etiqueta">TOP 2024</div>
+        </div>
+
+        <!-- Producto 2  -->
+        <div class="producto">
+          <span class="rank">2</span>
+          <img src="/img/s25.jpg" alt="Samsung Galaxy S25 Ultra">
+          <h3>Samsung Galaxy S25 Ultra</h3>
+          <div class="rating">★★★★★ <span class="rating-value">4.9</span></div>
+          <p class="precio">MX $20,867</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Plata</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #C0C0C0;" data-color="Plata"></span>
+                <span class="color-btn" style="background: #2D2D2D;" data-color="Negro titanio"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn ">256 GB</span>
+                <span class="memoria-btn activo">512 GB</span>
+                <span class="memoria-btn ">1 TB</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-ver">Reservar</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto">
+          <span class="rank">3</span>
+          <img src="/img/phone.jpg" alt="Apple iPhone 16 Pro Max">
+          <h3>Apple iPhone 16 Pro Max (512 GB)</h3>
+          <div class="rating">★★★★★ <span class="rating-value">4.9</span></div>
+          <p class="precio">MX $35,999</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Titanio negro</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #1F1F1F;" data-color="Titanio negro"></span>
+                <span class="color-btn" style="background: #F4F2F1;" data-color="Blanco"></span>
+                <span class="color-btn" style="background: #D6C6B6;" data-color="Del desierto"></span>
+                <span class="color-btn" style="background: #DDD8CD;" data-color="Natural"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">265 GB</span>
+                <span class="memoria-btn ">512 GB</span>
+                <span class="memoria-btn ">1 tB</span>
+              </div>
+            </div>
+          </div>
+          <div class="etiqueta">Distribuidor Autorizado</div>
+          <button class="btn-ver">Ver detalles</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto">
+          <span class="rank">4</span>
+          <img src="/img/edge50.jpg" alt="Motorola Edge 50 Pro">
+          <h3>Motorola Edge 50 Pro</h3>
+          <div class="rating">★★★★☆ <span class="rating-value">4.6</span></div>
+          <p class="precio">MX $9,499</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Azul cielo</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #7BB2E8;" data-color="Azul cielo"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">512 GB</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-ver">Ver detalles</button>
+        </div>
+
+      </div>
+      <a href="/productos" class="ver-todo">Ver lista completa <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+    <!-- 5. Los más vendidos -->
+<div class="top-products">
+    <h2 class="section-title">LOS MÁS VENDIDOS</h2>
+    <div class="top-section">
+      <div class="productos-grid">
+
+        <!-- Producto 1 -->
+        <div class="producto destacado">
+          <span class="rank">1</span>
+          <img src="/img/x7_pro.jpg" alt="Poco X7 Pro">
+          <h3>Poco X7 Pro</h3>
+          <div class="rating">★★★★☆ <span class="rating-value">4.7</span></div>
+          <p class="precio">MX $5,440</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Azul oscuro</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #1E3A5F;" data-color="Azul oscuro"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">256 GB</span>
+              </div>
+            </div>
+          </div>
+          <div class="etiqueta">¡OFERTA!</div>
+          <button class="btn-ver">Ver detalles</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto">
+          <span class="rank">2</span>
+          <img src="/img/GT7_Pro.jpg" alt="realme GT7 Pro">
+          <h3>realme GT7 Pro</h3>
+          <div class="rating">★★★★☆ <span class="rating-value">4.6</span></div>
+          <p class="precio">MX $7,000 <span class="descuento">7% OFF</span></p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Gris titanio</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #8A8D91;" data-color="Gris titanio"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">512 GB</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-ver">Ver detalles</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto">
+          <span class="rank">3</span>
+          <img src="/img/turbo4.jpg" alt="Xiaomi Redmi Turbo 4 Pro">
+          <h3>Xiaomi Redmi Turbo 4 Pro</h3>
+          <div class="rating">★★★★☆ <span class="rating-value">4.5</span></div>
+          <p class="precio">MX $6,336</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Negro carbón</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #222;" data-color="Negro carbón"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">256 GB</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-ver">Ver detalles</button>
+        </div>
+
+        <!-- Producto 4  -->
+        <div class="producto">
+          <span class="rank">4</span>
+          <img src="/img/nova12.jpg" alt="Huawei Nova 12 Pro">
+          <h3>Huawei Nova 12 Pro</h3>
+          <div class="rating">★★★★☆ <span class="rating-value">4.4</span></div>
+          <p class="precio">MX $9,899</p>
+          <div class="especificaciones-detalle">
+            <div class="selector-opciones">
+              <p><strong>Color:</strong> Azul brillante</p>
+              <div class="colores">
+                <span class="color-btn activo" style="background: #007FFF;" data-color="Azul brillante"></span>
+              </div>
+            </div>
+            <div class="selector-opciones">
+              <p><strong>Memoria interna:</strong></p>
+              <div class="memoria-opciones">
+                <span class="memoria-btn activo">512 GB</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn-ver">Ver detalles</button>
+        </div>
+
+      </div>
+      <a href="/productos" class="ver-todo">Ver lista completa <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+    <!-- 6. Marcas Destacadas -->
+    <div class="marcas-destacadas">
+        <h2 class="section-title">MARCAS DESTACADAS</h2>
+        <p>Encuentra los mejores smartphones de las marcas más reconocidas</p>
+        <div class="marcas-grid">
+            <div class="marca"><img src="/img/logo_ph.jpg" alt="!Phone"></div>
+            <div class="marca"><img src="/img/logo_sam.jpg" alt="Samsung"></div>
+            <div class="marca"><img src="/img/logo_xio.jpg" alt="Xiaomi"></div>
+            <div class="marca"><img src="/img/logo_poco.jpg" alt="POCO"></div>
+            <div class="marca"><img src="/img/logo_real.jpg" alt="realme"></div>
+            <div class="marca"><img src="/img/logo_opp.jpg" alt="Oppo"></div>
+            <div class="marca"><img src="/img/logo_vivo.jpg" alt="vivo"></div>
+        </div>
+    </div>
+
+    <!-- 7. Ofertas relámpago -->
+    <div class="ofertas">
+    <h2><i class="fas fa-bolt"></i> Ofertas relámpago</h2>
+    <p>¡Aprovecha nuestras ofertas por tiempo limitado!</p>
+    <div class="countdown">Termina en: <span id="countdown-timer">05:23:47</span></div>
+    <div class="ofertas-grid">
+        <!-- Oferta 1 -->
+        <div class="oferta-item">
+            <div class="oferta-tag">70% OFF</div>
+            <div class="imagen-contenedor">
+                <img src="/img/oferta1.jpg" alt="Xiaomi Redmi Note 14">
+            </div>
+            <h3>Xiaomi Redmi Note 14</h3>
+            <div class="precio-oferta">
+                <span class="precio-antiguo">MX5 4,999</span>
+                <span class="precio-actual">MX5 3,499</span>
+            </div>
+            <button class="btn-comprar">Comprar ahora</button>
+        </div>
+        
+        <!-- Oferta 2 -->
+        <div class="oferta-item">
+            <div class="oferta-tag">50% OFF</div>
+            <div class="imagen-contenedor">
+                <img src="/img/oferta2.jpg" alt="Realme GT 6">
+            </div>
+            <h3>Realme GT 6</h3>
+            <div class="precio-oferta">
+                <span class="precio-antiguo">MX5 6,999</span>
+                <span class="precio-actual">MX5 4,999</span>
+            </div>
+            <button class="btn-comprar">Comprar ahora</button>
+        </div>
+        
+        <!-- Oferta 3 -->
+        <div class="oferta-item">
+            <div class="oferta-tag">60% OFF</div>
+            <div class="imagen-contenedor">
+                <img src="/img/oferta3.jpg" alt="POCO X7">
+            </div>
+            <h3>POCO X7</h3>
+            <div class="precio-oferta">
+                <span class="precio-antiguo">MX5 5,299</span>
+                <span class="precio-actual">MX5 3,799</span>
+            </div>
+            <button class="btn-comprar">Comprar ahora</button>
+        </div>
+    </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+<div class="productos-page">
+    <h1>Aquí encontrarás variedad</h1>
+    <img class="banner-principal" src="/img/celulares1.png" alt="Celulares">
+    <div class="productos-container">
+        <section class="productos-grid">
+            @for(producto of productos; track producto.id){
+            <article class="producto-card">
+                <!-- Botón de favoritos en esquina superior derecha -->
+                <button class="btn-favorito" (click)="toggleFavorito(producto)">
+                <i class="icono-favorito" [class.favorito-activo]="producto.favorito">♥</i>
+                </button>
+                
+                <img class="producto-imagen" [src]="producto.imagen" [alt]="producto.nombre">
+                <div class="producto-info">
+                    <h3 class="producto-nombre">{{producto.nombre}}</h3>
+                    <p class="producto-descripcion">{{producto.descripcion}}</p>
+                    <span class="producto-precio">${{producto.precio.toFixed(2)}}</span>
+                    <button class="btn-ver-mas" (click)="toggleEspecificaciones(producto)">
+                      {{ producto.expandido ? 'Ver menos' : 'Ver más' }}
+                    </button>
+                    
+                    @if(producto.expandido && producto.especificaciones) {
+                    <div class="especificaciones">
+                        <h4>Especificaciones:</h4>
+                        <ul>
+                            @if(producto.especificaciones.pantalla) {
+                            <li>Pantalla: {{producto.especificaciones.pantalla}}</li>
+                            }
+                            @if(producto.especificaciones.almacenamiento) {
+                            <li>Almacenamiento: {{producto.especificaciones.almacenamiento}}</li>
+                            }
+                            @if(producto.especificaciones.ram) {
+                            <li>RAM: {{producto.especificaciones.ram}}</li>
+                            }
+                            @if(producto.especificaciones.camara) {
+                            <li>Cámara: {{producto.especificaciones.camara}}</li>
+                            }
+                            @if(producto.especificaciones.bateria) {
+                            <li>Batería: {{producto.especificaciones.bateria}}</li>
+                            }
+                            @if(producto.especificaciones.procesador) {
+                            <li>Procesador: {{producto.especificaciones.procesador}}</li>
+                            }
+                        </ul>
+                    </div>
+                    }
+                </div>
+            </article>
+            }
+        </section>
+    </div>  
+</div>

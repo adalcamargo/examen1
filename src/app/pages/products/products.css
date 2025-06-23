@@ -1,0 +1,186 @@
+/* Estilos generales */
+.productos-page {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+h1 {
+   font-family: 'Montserrat', sans-serif; 
+            color: #2c3e50; 
+            text-align: center; 
+            font-size: 2.8rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin: 20px 0; 
+            padding-bottom: 15px; 
+            border-bottom: 3px solid #3498db; 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Banner principal */
+.banner-principal {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de productos */
+.productos-container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Tarjeta de producto */
+.producto-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto */
+.producto-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f8f8f8;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Información del producto */
+.producto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.producto-nombre {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #222;
+}
+
+.producto-descripcion {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.producto-precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #007bff;
+    margin: 0 0 15px 0;
+}
+
+/* Botones */
+.btn-ver-mas {
+    background: #3c3d3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-ver-mas:hover {
+    background: #3e3f41;
+    transform: translateY(-2px);
+}
+.especificaciones {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.especificaciones ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.especificaciones li {
+  margin-bottom: 5px;
+}
+/* Estilos para el botón de favoritos */
+.btn-favorito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.btn-favorito:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.icono-favorito {
+  color: #ccc;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.icono-favorito.favorito-activo {
+  color: #ff4081;
+}
+
+.producto-card {
+  position: relative; /* Necesario para posicionar el botón de favoritos */
+  /* ... tus otros estilos existentes ... */
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .producto-card {
+        padding: 15px;
+    }
+    
+    .banner-principal {
+        max-width: 100%;
+    }
+}

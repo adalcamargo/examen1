@@ -1,0 +1,132 @@
+/* Estilos generales del header */
+.main-header {
+  background-color: #1a1a2e; /* Fondo oscuro elegante */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 0;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo del logo */
+.main-header {
+  height: 80px; /* Altura fija para todo el header */
+  padding: 0; /* Eliminamos el padding vertical anterior */
+}
+
+.logo {
+  height: 100%; /* Toma el 100% de la altura del header */
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  padding: 0 15px; /* Padding horizontal manteniendo el estilo */
+}
+
+.logo img {
+  height: 80%; /* Altura relativa al contenedor padre */
+  max-height: 65px; /* Máximo altura para no distorsionar */
+  width: auto; /* Mantiene proporción original */
+  object-fit: contain; /* Asegura que toda la imagen sea visible */
+  filter: 
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.7))
+    drop-shadow(0 0 5px rgba(100, 200, 255, 0.3));
+  transition: all 0.3s ease;
+}
+
+
+/* Estilo de la navegación */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  position: relative;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Iconos - Usando Font Awesome (debes incluir la librería) */
+.nav-links a::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.nav-links a[routerLink="/"]::before {
+  content: "\f015"; /* Icono casa */
+}
+
+.nav-links a[routerLink="/nosotros"]::before {
+  content: "\f0c0"; /* Icono grupo */
+}
+
+.nav-links a[routerLink="/productos"]::before {
+  content: "\f07a"; /* Icono bolsa */
+}
+
+.nav-links a[routerLink="/contacto"]::before {
+  content: "\f0e0"; /* Icono sobre */
+}
+
+/* Efecto activo */
+.nav-links a.router-link-active {
+  color: #4cc9f0;
+  font-weight: 600;
+}
+
+.nav-links a.router-link-active::before {
+  color: #4cc9f0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .nav-links {
+    gap: 10px;
+  }
+  
+  .nav-links a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links a span {
+    display: none; /* Oculta el texto en móviles muy pequeños */
+  }
+  
+  .nav-links a::before {
+    font-size: 16px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+}

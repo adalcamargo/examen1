@@ -1,0 +1,598 @@
+/* Estilos generales */
+.inicio {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.hero-banner h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+.hero-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/*Slider */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 300px;
+  flex-shrink: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para las tarjetas de producto */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+}
+
+.product-title {
+  color: #000000;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sponsor-badge {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.payment-option {
+  margin: 15px 0;
+}
+
+.aplazo-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.aplazo-text {
+  background-color: #000000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buy-now-text {
+  font-weight: bold;
+  color: #000000;
+}
+
+.payment-slogan {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.buy-now-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.buy-now-button:hover {
+  background-color: #d32f2f;
+}
+
+.store-info {
+  font-size: 0.8rem;
+  color: #777777;
+}
+
+/* Estilos para las imágenes promocionales */
+.promo-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 400px;
+}
+/* Beneficios */
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.beneficio-item {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.beneficio-item:hover {
+    transform: translateY(-5px);
+}
+.beneficio-item i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+.beneficio-item h4 {
+    margin: 10px 0 5px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+.beneficio-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Teléfonos nuevos */
+.telefonos-nuevos {
+    margin: 60px 0;
+}
+.section-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+}
+.section-title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+.nuevos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+.nuevo-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+.nuevo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.nuevo-item.destacado {
+    border: 3px solid #e74c3c;
+}
+.nuevo-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+.nuevo-item .badge-nuevo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #3498db;
+    font-size: 0.9rem;
+    padding: 5px 12px;
+}
+.nuevo-item h3 {
+    margin: 15px 15px 10px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+.especificaciones {
+    margin: 0 15px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+.especificaciones span {
+    display: block;
+    margin-bottom: 5px;
+}
+.nuevo-item .precio {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+.descuento {
+    font-size: 0.9rem;
+    color: #e74c3c;
+    font-weight: normal;
+}
+.btn-ver {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn-ver:hover {
+    background: #2980b9;
+}
+.nuevo-item img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain; /* 👈 clave para que no se deforme */
+    border-bottom: 1px solid #eee;
+}
+
+
+/* Top Products */
+.top-products {
+    margin: 60px 0;
+}
+.top-section {
+    margin-bottom: 50px;
+}
+.top-section h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.top-section h2 i {
+    color: #e74c3c;
+}
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+.producto {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.producto.destacado {
+    border: 2px solid #e74c3c;
+}
+.rank {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #3498db;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.producto h3 {
+    margin: 10px 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    min-height: 50px;
+}
+.precio {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+.descuento {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+.etiqueta {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.ver-todo {
+    display: inline-block;
+    margin-top: 25px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.ver-todo:hover {
+    color: #2980b9;
+}
+.ver-todo i {
+    margin-left: 5px;
+}
+
+/* Marcas Destacadas */
+.marcas-destacadas {
+    margin: 60px 0;
+    text-align: center;
+}
+.marcas-destacadas h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+.marcas-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.marca {
+    width: 150px;
+    padding: 20px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+.marca:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+.marca img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ofertas relámpago */
+/* Estilos para la sección de ofertas */
+.ofertas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ofertas h2 {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.ofertas h2 i {
+    margin-right: 10px;
+}
+
+.ofertas p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    background: #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.oferta-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.oferta-item:hover {
+    transform: translateY(-5px);
+}
+
+.oferta-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.imagen-contenedor {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.oferta-item:hover .imagen-contenedor img {
+    transform: scale(1.05);
+}
+
+.oferta-item h3 {
+    padding: 0 20px;
+    margin: 15px 0 10px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.precio-oferta {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.precio-antiguo {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    display: block;
+}
+
+.precio-actual {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.btn-comprar {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+    background: #2980b9;
+}
+
+
+
+
+.selector-opciones {
+        margin: 12px 0;
+    }
+    .colores, .memoria-opciones {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+    }
+    .color-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+    .color-btn.activo {
+        border-color: #007bff;
+        transform: scale(1.1);
+    }
+    .memoria-btn {
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .memoria-btn.activo {
+        background: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
